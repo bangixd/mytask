@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post" action="" class="row g-3 justify-content-center">
+  {% csrf_token %}
+  <div class="col-md-6 text-center form-outline mb-4">
+  {{ form }}
+  </div>
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4">Subscribe</button>
+</form>
+{% endblock %}

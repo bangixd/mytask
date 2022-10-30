@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container bootdey">
+    <div class="row product-list">
+            <div class="col-md-4">
+                <section class="panel">
+                    <div class="pro-img-box">
+                        <img src="{{product.image.url}}" alt="" class="img-thumbnail" style="width:100%;height:225px"/>
+                    </div>
+
+                    <div class="panel-body text-center">
+                        <h4>
+                           <p>     {{product.name}} </p>
+                          Amount : {{product.amount}}
+                        </h4>
+                        <h6>
+                          {{product.describe}}
+                        </h6>
+                        <p class="price">${{product.price}}</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+</div>
+{% endblock %}
