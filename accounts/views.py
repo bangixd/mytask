@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
 from .form import UserRegisterForm, UserLoginForm
 from .models import User
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout, forms
 from django.contrib import messages
 
 
@@ -25,7 +25,7 @@ class UserRegisterView(View):
 
 
 class UserLoginView(View):
-    form_class = UserLoginForm
+    form_class = forms.AuthenticationForm
     template_name = 'accounts/login.html'
 
     def get(self, request):

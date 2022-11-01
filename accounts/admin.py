@@ -27,7 +27,6 @@ class UserAdminSite(BaseUserAdmin):
     filter_horizontal = ('user_permissions', 'groups')
 
 
-admin.site.unregister(Group)
 admin.site.register(User, UserAdminSite)
 
 
